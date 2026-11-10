@@ -34,7 +34,7 @@ for k = 1:length(t)
     xFoot = xAnkle + L3*cos(theta(3,k));
     yFoot = yAnkle + L3*sin(theta(3,k));
 
-    % Link centers
+    %Center
     xUpper = xKnee/2;
     yUpper = yKnee/2;
 
@@ -44,7 +44,7 @@ for k = 1:length(t)
     xFootCenter = xAnkle + L3/2*cos(theta(3,k));
     yFootCenter = yAnkle + L3/2*sin(theta(3,k));
 
-    % Inertia about the base
+    %Inertia
     I(k) = ...
         mMKnee*(xKnee^2 + yKnee^2) + ...
         mMAnkle*(xAnkle^2 + yAnkle^2) + ...
@@ -52,7 +52,7 @@ for k = 1:length(t)
         mLCalf *(xCalf^2 + yCalf^2 + L2^2/12) + ...
         mLFoot *(xFootCenter^2 + yFootCenter^2 + L3^2/12);
 
-    % Base, knee, ankle, and foot-end positions
+    %Position
     P = [0, xKnee, xAnkle, xFoot;
          0, yKnee, yAnkle, yFoot];
 
