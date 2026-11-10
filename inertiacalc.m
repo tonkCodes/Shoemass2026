@@ -55,7 +55,7 @@ for k = 1:length(t)
     %Position
     P = [0, xKnee, xAnkle, xFoot;
          0, yKnee, yAnkle, yFoot];
-
+% i lowk forgot how to animate things so had copilot do this part, if we submit it for actual team documentation ill redo myself but in mean time it works.
     clf
     hold on
 
